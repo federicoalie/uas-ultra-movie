@@ -5,15 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class loginActivity extends AppCompatActivity {
+public class registerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
     }
 
-    public void btnSignUp(View view) {
+    public void btnBack(View view) {
+
+    }
+
+    public void btnSignIn(View view) {
 
     }
 }
