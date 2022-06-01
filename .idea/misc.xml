@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/drawable/button_rounded.xml" value="0.2445" />
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/drawable/edit_text_background.xml" value="0.2445" />
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/drawable/ic_arrow_back.xml" value="0.2535" />
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/drawable/logo_ultra_modified.xml" value="0.2445" />
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/activity_splash_screen.xml" value="0.30052083333333335" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
