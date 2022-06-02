@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".aboutUsActivity">
+
+    <TextView
+        android:id="@+id/textAboutUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40sp"
+        android:textColor="@color/white"
+        android:text="About Us"
+        android:textSize="32sp"
+        android:fontFamily="@font/montserrat_bold" />
+
+    <TextView
+        android:id="@+id/textJudulAnggotaKelompok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textAboutUs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="start"
+        android:text="Kelompok 2 - 4PBD51"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textAnggotaKelompok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textJudulAnggotaKelompok"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:text="35200084 - Kiara Amor Senhor Ariana\n35200090 - Cindy Caroline Sukamto\n35200092 - Joey Nathaniel Rudiono\n35200094 - Federico Alie"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/logo_ubm"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/textAnggotaKelompok"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ubm_putih_1920" />
+
+    <ImageView
+        android:id="@+id/logo_ultra"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/logo_ubm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40sp"
+        android:src="@drawable/logo_ultra" />
+
+
+</RelativeLayout>
