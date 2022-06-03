@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".profileActivity">
+
+    <TextView
+        android:id="@+id/text_MyProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="My Profile"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:fontFamily="@font/montserrat_bold" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circlePhotoProfile"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/text_MyProfile"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="40dp"
+        app:civ_border_width="2.5dp"
+        app:civ_border_color="@color/white"
+        android:src="@drawable/user" />
+
+    <TextView
+        android:id="@+id/btnEditPhotoProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circlePhotoProfile"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:onClick="btnEditPhoto"
+        android:text="Edit Photo Profile"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/linearNameAndUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/circlePhotoProfile"
+        android:layout_marginTop="155dp"
+        android:layout_marginStart="25sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Full Name"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/getFullName"
+            android:layout_width="185dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center|start"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:background="@drawable/text_view_background"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="Muhammad Bejo Rahmawan" />
+
+        <TextView
+            android:id="@+id/textUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=" Username"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/getUsername"
+            android:layout_width="185dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center|start"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:background="@drawable/text_view_background"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="16sp"
+            android:text="mbejorahman" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearGenderAndCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnEditPhotoProfile"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="45dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/getGender"
+            android:layout_width="315dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center|start"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:background="@drawable/text_view_background"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Male" />
+
+        <TextView
+            android:id="@+id/textCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Country"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/getCountry"
+            android:layout_width="315dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center|start"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:background="@drawable/text_view_background"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Indonesia" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logo_ultra"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_ultra" />
+
+</RelativeLayout>
