@@ -50,7 +50,7 @@
         android:layout_height="200dp"
         android:layout_below="@id/textAnggotaKelompok"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/ubm_putih_1920" />
 
     <ImageView
@@ -59,7 +59,7 @@
         android:layout_height="80dp"
         android:layout_below="@id/logo_ubm"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40sp"
+        android:layout_alignParentBottom="true"
         android:src="@drawable/logo_ultra" />
 
 
