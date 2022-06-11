@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/imagePoster"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"/>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/imagePoster"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtJudul"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Doctor Strange : Multiverse Of Madness"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtTahun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="10dp"
+            android:text="2022"
+            android:textColor="@color/grey_white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25sp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textMoreDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="More Detail"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/icon_back"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                android:scaleX="-1"
+                android:src="@drawable/ic_arrow_more_detail" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

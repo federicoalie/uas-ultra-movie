@@ -8,13 +8,17 @@
         <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/drawable/edit_text_background.xml" value="0.2445" />
         <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/drawable/ic_arrow_back.xml" value="0.2535" />
         <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/drawable/logo_ultra_modified.xml" value="0.2445" />
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/drawable/movie_view.xml" value="0.2535" />
         <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/drawable/text_view_background.xml" value="0.2535" />
         <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/activity_about_us.xml" value="0.30052083333333335" />
-        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/activity_login.xml" value="0.15744535519125682" />
-        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/activity_main_menu_admin.xml" value="0.15744535519125682" />
-        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/activity_profile.xml" value="0.22" />
-        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/activity_register.xml" value="0.3333333333333333" />
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/activity_main_menu_admin.xml" value="0.3333333333333333" />
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/activity_profile.xml" value="0.20897552130553038" />
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/activity_splash_screen.xml" value="0.30052083333333335" />
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/view_genre.xml" value="0.2994791666666667" />
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/view_movie.xml" value="0.3333333333333333" />
+        <entry key="..\:/UBM/Semester 4/Android Studio/UltraMovie/app/src/main/res/layout/view_writter.xml" value="0.20878623188405798" />
       </map>
     </option>
   </component>
