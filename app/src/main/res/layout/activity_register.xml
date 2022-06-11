@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo_ultra"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="Sign Up"
         android:textColor="@color/white"
@@ -43,6 +43,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textSignUp"
+        app:counterEnabled="true"
+        app:counterTextColor="@color/white"
+        app:counterMaxLength="22"
         android:hint="Full Name"
         android:textColorHint="@color/light_grey"
         app:hintTextColor="@color/grey_white"
@@ -54,6 +57,7 @@
             android:id="@+id/editTextFullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLength="22"
             android:background="@drawable/edit_text_background"
             android:textColor="@color/grey_white"
             android:textCursorDrawable="@drawable/cursor_modified"
@@ -67,17 +71,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textInputFullName"
+        app:counterEnabled="true"
+        app:counterTextColor="@color/white"
+        app:counterMaxLength="22"
         android:hint="Username"
         android:textColorHint="@color/light_grey"
         app:hintTextColor="@color/grey_white"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="20sp" >
+        android:layout_marginTop="5sp" >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLength="22"
             android:background="@drawable/edit_text_background"
             android:textColor="@color/grey_white"
             android:textCursorDrawable="@drawable/cursor_modified"
@@ -85,18 +93,66 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/textJenisKelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="40sp"
+        android:layout_below="@id/textInputUsername"
+        android:text="Jenis Kelamin"
+        android:fontFamily="sans-serif-black"
+        android:textSize="22sp"
+        android:textColor="@color/white" />
+
+
+    <RadioGroup
+        android:id="@+id/groupRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textJenisKelamin"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rdLaki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/red"
+            android:gravity="center_horizontal|center"
+            android:layout_marginEnd="10dp"
+            android:text="Laki-Laki"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp"/>
+
+        <RadioButton
+            android:id="@+id/rdPerempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:buttonTint="@color/red"
+            android:layout_marginStart="28dp"
+            android:text="Perempuan"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputCountry"
         style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textInputUsername"
+        android:layout_below="@+id/groupRadio"
         android:hint="Country"
         android:textColorHint="@color/light_grey"
         app:hintTextColor="@color/grey_white"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="20sp" >
+        android:layout_marginTop="10sp" >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextCountry"
@@ -122,7 +178,7 @@
         app:hintTextColor="@color/grey_white"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="20sp" >
+        android:layout_marginTop="10sp" >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextPassword"
@@ -148,7 +204,7 @@
         app:hintTextColor="@color/grey_white"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="20sp" >
+        android:layout_marginTop="10sp" >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextConfirmPassword"
@@ -165,11 +221,11 @@
         android:id="@+id/btnSignIn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/textInputConfirmPassword"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="85dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="85dp"
-        android:layout_marginTop="50dp"
         android:background="@drawable/button_rounded"
         android:fontFamily="sans-serif-black"
         android:text="Sign Up"
@@ -183,7 +239,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnSignIn"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-black"
         android:text="Already have an Account ? "
         android:textColor="@color/light_grey"
@@ -195,7 +251,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnSignIn"
         android:layout_marginStart="15sp"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="18dp"
         android:layout_toEndOf="@+id/textDont"
         android:fontFamily="sans-serif-black"
         android:onClick="btnSignIn"
