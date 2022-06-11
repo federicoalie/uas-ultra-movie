@@ -15,12 +15,15 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher_ultra_logo"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_ultra_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UltraMovie"
         android:usesCleartextTraffic="true"
-        android:requestLegacyExternalStorage="true"
         tools:targetApi="31">
+        <activity
+            android:name=".mainMenuMember"
+            android:exported="false" />
         <activity
             android:name=".profileActivity"
             android:exported="false" />

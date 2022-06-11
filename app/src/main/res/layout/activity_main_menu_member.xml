@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".mainMenuAdmin">
+    tools:context=".mainMenuMember">
 
     <LinearLayout
-        android:id="@+id/linearProfileAdmin"
+        android:id="@+id/linearProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:layout_alignParentEnd="true"
         android:orientation="vertical"
-        android:onClick="btnProfileAdmin">
+        android:onClick="btnProfile">
 
         <ImageView
             android:id="@+id/icon_profile"
@@ -36,14 +36,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linear_AboutUsAdmin"
+        android:id="@+id/linear_AboutUs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
         android:layout_marginTop="7dp"
-        android:layout_toStartOf="@+id/linearProfileAdmin"
+        android:layout_toStartOf="@+id/linearProfile"
         android:orientation="vertical"
-        android:onClick="btnAboutUsAdmin">
+        android:onClick="btnAboutUs">
 
         <ImageView
             android:id="@+id/icon_aboutUs"
@@ -93,7 +93,7 @@
         android:background="@color/red" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerMovieAdmin"
+        android:id="@+id/recyclerMovie"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/textMovie"
