@@ -27,6 +27,8 @@ public class mainMenuAdmin extends AppCompatActivity {
     }
 
     public void btnProfileAdmin(View view) {
-
+        Intent profile = new Intent(getApplicationContext(), profileActivity.class);
+        profile.putExtra("username", String.valueOf(username));
+        startActivity(profile);
     }
 }

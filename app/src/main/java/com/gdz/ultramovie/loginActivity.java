@@ -45,13 +45,13 @@ public class loginActivity extends AppCompatActivity {
                 String user = usernameLogin.getText().toString();
                 String pass = passwordLogin.getText().toString();
 
-                checkValidity(user, pass);
+                checkUserValidity(user, pass);
             }
         });
 
     }
 
-    public void checkValidity(final String username, final String password){
+    public void checkUserValidity(final String username, final String password){
         StringRequest request = new StringRequest(Request.Method.POST, databaseURL.login, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
