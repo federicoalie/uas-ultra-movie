@@ -73,25 +73,25 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageViewMovieDetail"
+        android:id="@+id/getImageViewMovieDetail"
         android:layout_width="220dp"
         android:layout_height="270dp"
         android:layout_below="@+id/logo_ultra"
-        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/ic_launcher"
-        android:scaleType="fitXY" />
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
 
     <TextView
-        android:id="@+id/txtJudulMovieDetail"
+        android:id="@+id/getJudulMovieDetail"
         android:layout_width="304dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imageViewMovieDetail"
+        android:layout_below="@id/getImageViewMovieDetail"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="DOCTOR STRANGE MULTIVERSE OF MADNESS"
-        android:fontFamily="sans-serif-black"
         android:textColor="@color/white"
         android:textSize="24dp" />
 
@@ -99,7 +99,7 @@
         android:id="@+id/linearGenre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtJudulMovieDetail"
+        android:layout_below="@+id/getJudulMovieDetail"
         android:layout_marginTop="15dp"
         android:layout_marginStart="30dp"
         android:orientation="horizontal">
@@ -117,7 +117,7 @@
 
         <TextView
             android:id="@+id/getGenre"
-            android:layout_width="220dp"
+            android:layout_width="275dp"
             android:layout_height="35dp"
             android:layout_marginStart="30dp"
             android:background="@drawable/text_view_background"
@@ -127,7 +127,7 @@
             android:text="Genre"
             android:textColor="@color/white"
             android:fontFamily="sans-serif-black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -153,7 +153,7 @@
 
         <TextView
             android:id="@+id/getDirectors"
-            android:layout_width="220dp"
+            android:layout_width="275dp"
             android:layout_height="35dp"
             android:layout_marginStart="14dp"
             android:background="@drawable/text_view_background"
@@ -163,7 +163,7 @@
             android:text="Director"
             android:textColor="@color/white"
             android:fontFamily="sans-serif-black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -189,7 +189,7 @@
 
         <TextView
             android:id="@+id/getWriter"
-            android:layout_width="220dp"
+            android:layout_width="275dp"
             android:layout_height="35dp"
             android:layout_marginStart="29dp"
             android:background="@drawable/text_view_background"
@@ -199,7 +199,7 @@
             android:text="Writer"
             android:textColor="@color/white"
             android:fontFamily="sans-serif-black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -225,7 +225,7 @@
 
         <TextView
             android:id="@+id/getStars"
-            android:layout_width="220dp"
+            android:layout_width="275dp"
             android:layout_height="35dp"
             android:layout_marginStart="37dp"
             android:background="@drawable/text_view_background"
@@ -235,7 +235,7 @@
             android:text="Stars"
             android:textColor="@color/white"
             android:fontFamily="sans-serif-black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -263,6 +263,7 @@
             android:layout_width="358dp"
             android:layout_height="150dp"
             android:layout_marginStart="2dp"
+            android:paddingTop="5dp"
             android:paddingStart="5dp"
             android:paddingEnd="0dp"
             android:background="@drawable/text_view_background"
@@ -270,7 +271,7 @@
             android:text="Professor Albus Dumbledore learns the powerful Dark wizard Gellert Grindelwald is on the move to rule the wizarding world. Unable to stop him alone, he entrusts Magizoologist Newt Scamander to lead a team of wizards and an intrepid Muggle baker on a dangerous mission."
             android:textColor="@color/white"
             android:fontFamily="sans-serif-black"
-            android:textSize="14sp" />
+            android:textSize="15sp" />
 
     </LinearLayout>
 

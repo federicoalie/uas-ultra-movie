@@ -6,4 +6,5 @@ public class databaseURL {
     public final static String viewDataMovie = "http://192.168.0.110/ultra_movie/viewDataMovie.php";
     public final static String uploadProfileImage = "http://192.168.0.110/ultra_movie/upload_profile_picture.php";
     public final static String viewUserData = "http://192.168.0.110/ultra_movie/viewUserData.php";
+    public final static String viewAllDataMovie = "http://192.168.0.110/ultra_movie/viewAllDataMovie.php";
 }

@@ -30,7 +30,7 @@ import java.util.List;
 public class mainMenuAdmin extends AppCompatActivity {
 
     String username;
-    private ArrayList<movie> movieArrayList = new ArrayList<>();
+    private final ArrayList<movie> movieArrayList = new ArrayList<>();
     private RecyclerView mRecyclerView;
 
 
@@ -49,7 +49,7 @@ public class mainMenuAdmin extends AppCompatActivity {
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        movieRecyclerViewAdapter adapter = new movieRecyclerViewAdapter(movieArrayList);
+        movieRecyclerViewAdapter adapter = new movieRecyclerViewAdapter(movieArrayList, this);
         loadMovieList();
         mRecyclerView.setAdapter(adapter);
 

@@ -1,5 +1,8 @@
 package com.gdz.ultramovie.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 public class movie {
     String namaMovie;
     String tahunMovie;

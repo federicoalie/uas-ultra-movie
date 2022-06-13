@@ -89,8 +89,8 @@ public class loginActivity extends AppCompatActivity {
                         finish();
                     }
                 } catch (JSONException e) {
-                    usernameLogin.setError("Username or Password is not correct!");
-                    passwordLogin.setError("Username or Password is not correct!");
+                    usernameLogin.setError("Username or Password incorrect!");
+                    passwordLogin.setError("Username or Password incorrect!");
                     e.printStackTrace();
                 }
             }
