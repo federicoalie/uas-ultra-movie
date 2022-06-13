@@ -68,8 +68,8 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/logo_ultra" />
 
     <TextView
@@ -77,19 +77,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo_ultra"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="30sp"
-        android:layout_marginStart="45dp"
-        android:text="MOVIES"
-        android:textSize="25sp"
         android:fontFamily="@font/montserrat_bold"
-        android:textColor="@color/white" />
+        android:text="MOVIES"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
 
     <View
         android:layout_width="1dp"
         android:layout_height="30dp"
         android:layout_below="@id/logo_ultra"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
         android:background="@color/red" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -97,8 +97,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/textMovie"
-        android:layout_marginStart="45sp"
-        android:layout_marginEnd="20sp" />
+        android:layout_marginStart="15sp"
+        android:layout_marginEnd="20sp"
+        android:fillViewport="true" />
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatActionTambah"

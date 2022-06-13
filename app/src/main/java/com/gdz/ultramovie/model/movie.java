@@ -7,6 +7,8 @@ public class movie {
     String stars;
     String director;
     String sinopsis;
+    String movie_image;
+
 
     public String getNamaMovie() {
         return namaMovie;
@@ -55,4 +57,13 @@ public class movie {
     public void setSinopsis(String sinopsis) {
         this.sinopsis = sinopsis;
     }
+
+    public String getMovie_image() {
+        return movie_image;
+    }
+
+    public void setMovie_image(String movie_image) {
+        this.movie_image = movie_image;
+    }
+
 }

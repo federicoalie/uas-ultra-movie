@@ -6,14 +6,13 @@
 
     <ImageView
         android:id="@+id/imagePoster"
-        android:layout_width="150dp"
-        android:layout_height="210dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20sp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="160dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10dp"
         android:scaleType="centerCrop"
         android:src="@mipmap/ic_launcher" />
-
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -31,7 +30,7 @@
             android:fontFamily="sans-serif-black"
             android:text="Doctor Strange : Multiverse Of Madness"
             android:textColor="@color/white"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/txtTahun"
@@ -41,7 +40,7 @@
             android:fontFamily="sans-serif-black"
             android:text="2022"
             android:textColor="@color/grey_white"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <LinearLayout
             android:id="@+id/linear2"
@@ -55,14 +54,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:text="More Detail"
+                android:text="More Details"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/icon_back"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="3dp"
                 android:scaleX="-1"
