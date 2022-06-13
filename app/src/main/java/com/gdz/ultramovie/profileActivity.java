@@ -60,7 +60,17 @@ public class profileActivity extends AppCompatActivity {
             username = bundle.getString("username");
         }
 
+
         putAllUserData(username);
+
+        btnSignOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent signOut = new Intent(getApplicationContext(), loginActivity.class);
+                startActivity(signOut);
+                finish();
+            }
+        });
 
     }
 
@@ -133,8 +143,7 @@ public class profileActivity extends AppCompatActivity {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
         byte [] imgByteArray = byteArrayOutputStream.toByteArray();
-        String encodedImg = Base64.encodeToString(imgByteArray, Base64.DEFAULT);
-        return encodedImg;
+        return Base64.encodeToString(imgByteArray, Base64.DEFAULT);
     }
 
     public void putAllUserData(final String username){
@@ -152,17 +161,9 @@ public class profileActivity extends AppCompatActivity {
                         setGender.setText(object.getString("jenis_kelamin"));
                         prfImage = object.getString("image_path");
 
-                        if(prfImage.isEmpty()){
-                            Toast.makeText(profileActivity.this, "profile image is empty, upload a image first!", Toast.LENGTH_SHORT).show();
-                        }
-                        else {
-                            Picasso.get().load(prfImage).into(profileImage);
-                        }
+                        Picasso.get().load(prfImage).into(profileImage);
+
                     }
-                    Intent putAdmin = new Intent(getApplicationContext(), mainMenuAdmin.class);
-                    Intent putMember = new Intent(getApplicationContext(), mainMenuMember.class);
-                    putAdmin.putExtra("username", String.valueOf(username));
-                    putMember.putExtra("username", String.valueOf(username));
 
                 } catch (JSONException e) {
                     Toast.makeText(profileActivity.this, "Error " + e, Toast.LENGTH_SHORT).show();

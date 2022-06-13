@@ -59,6 +59,7 @@ public class registerActivity extends AppCompatActivity {
                 String negara = country.getText().toString();
                 String pass = password.getText().toString();
                 String confPass = confirmPassword.getText().toString();
+                String image = "http://192.168.0.110/ultra_movie/profile_picture/default.png";
                 String level = "Member";
 
                 if(name.isEmpty() && user.isEmpty() && negara.isEmpty() && pass.isEmpty() && confPass.isEmpty()){
@@ -92,7 +93,7 @@ public class registerActivity extends AppCompatActivity {
                     confirmPassword.setError("Password not match!");
                 }
                 else {
-                    registerToDatabase(user, name, jenisKelamin, negara, confPass, level);
+                    registerToDatabase(user, image, name, jenisKelamin, negara, confPass, level);
                 }
 
             }
@@ -101,7 +102,7 @@ public class registerActivity extends AppCompatActivity {
 
     }
 
-    public void registerToDatabase(String username, String fullName, String gender, String country, String userPassword, String userLevel){
+    public void registerToDatabase(final String username, final String image_path , final String fullName, final String gender, final String country, final String userPassword, final String userLevel){
         StringRequest stringRequest = new StringRequest(Request.Method.POST, databaseURL.register, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

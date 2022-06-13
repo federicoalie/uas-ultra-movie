@@ -45,7 +45,23 @@ public class loginActivity extends AppCompatActivity {
                 String user = usernameLogin.getText().toString();
                 String pass = passwordLogin.getText().toString();
 
-                checkUserValidity(user, pass);
+                if(user.isEmpty() && pass.isEmpty()){
+                    usernameLogin.setError("Username cannot be empty!");
+                    passwordLogin.setError("Password cannot be empty!");
+                    usernameLogin.requestFocus();
+                }
+                else if (user.isEmpty()){
+                    usernameLogin.setError("Username cannot be empty!");
+                    usernameLogin.requestFocus();
+                }
+                else if(pass.isEmpty()){
+                    passwordLogin.setError("Password cannot be empty");
+                    passwordLogin.requestFocus();
+                }
+                else {
+                    checkUserValidity(user, pass);
+                }
+
             }
         });
 
@@ -73,7 +89,8 @@ public class loginActivity extends AppCompatActivity {
                         finish();
                     }
                 } catch (JSONException e) {
-                    Toast.makeText(loginActivity.this, "Error " + e, Toast.LENGTH_SHORT).show();
+                    usernameLogin.setError("Username or Password is not correct!");
+                    passwordLogin.setError("Username or Password is not correct!");
                     e.printStackTrace();
                 }
             }
