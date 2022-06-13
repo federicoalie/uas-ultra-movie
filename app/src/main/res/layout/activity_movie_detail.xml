@@ -1,9 +1,277 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".movieDetailActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/logo_ultra"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logo_ultra" />
+
+    <LinearLayout
+        android:id="@+id/linearProfileDetailMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:onClick="btnProfileDetailMovie">
+
+        <ImageView
+            android:id="@+id/icon_profile"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:src="@drawable/user" />
+
+        <TextView
+            android:id="@+id/text_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_AboutUsAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_toStartOf="@+id/linearProfileDetailMovie"
+        android:orientation="vertical"
+        android:onClick="btnAboutUsDetailMovie">
+
+        <ImageView
+            android:id="@+id/icon_aboutUs"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:src="@drawable/info" />
+
+        <TextView
+            android:id="@+id/text_aboutUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="About Us"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewMovieDetail"
+        android:layout_width="220dp"
+        android:layout_height="270dp"
+        android:layout_below="@+id/logo_ultra"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/txtJudulMovieDetail"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewMovieDetail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="DOCTOR STRANGE MULTIVERSE OF MADNESS"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
+
+    <LinearLayout
+        android:id="@+id/linearGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtJudulMovieDetail"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textGenreMovieDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genre"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/getGenre"
+            android:layout_width="220dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/text_view_background"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:gravity="start|center"
+            android:text="Genre"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearDirectors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearGenre"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textDirectorMovieDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Director"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/getDirectors"
+            android:layout_width="220dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/text_view_background"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:gravity="start|center"
+            android:text="Director"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearWriter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearDirectors"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textWriterMovieDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Writer"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/getWriter"
+            android:layout_width="220dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="29dp"
+            android:background="@drawable/text_view_background"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:gravity="start|center"
+            android:text="Writer"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearWriter"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textStarsMovieDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stars"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/getStars"
+            android:layout_width="220dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="37dp"
+            android:background="@drawable/text_view_background"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:gravity="start|center"
+            android:text="Stars"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearSinopsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearStars"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textSinopsisMovieDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sinopsis"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/getSinopsis"
+            android:layout_width="358dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="2dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:background="@drawable/text_view_background"
+            android:gravity="start"
+            android:text="Professor Albus Dumbledore learns the powerful Dark wizard Gellert Grindelwald is on the move to rule the wizarding world. Unable to stop him alone, he entrusts Magizoologist Newt Scamander to lead a team of wizards and an intrepid Muggle baker on a dangerous mission."
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
