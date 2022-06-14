@@ -1,4 +1,4 @@
-package com.gdz.ultramovie;
+package com.gdz.ultramovie.insertData;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +22,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.gdz.ultramovie.R;
+import com.gdz.ultramovie.databaseURL;
+import com.gdz.ultramovie.mainActivity.mainMenuAdmin;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -172,6 +175,7 @@ public class insertMovieData extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if (!jsonObject.getBoolean("errormsg")){
+                        Log.d(TAG, "SUCCESS");
                         Intent backToMainMenu = new Intent(getApplicationContext(), mainMenuAdmin.class);
                         backToMainMenu.putExtra("username", username);
                         finish();

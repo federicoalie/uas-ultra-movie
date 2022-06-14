@@ -22,7 +22,7 @@
             android:src="@mipmap/ic_launcher" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnChooseImage"
+            android:id="@+id/btnUpdateImage"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_below="@+id/imageViewMovie"
@@ -37,11 +37,11 @@
             android:textSize="18sp" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputIDWriter"
+            android:id="@+id/textInputUpdateIDWriter"
             style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btnChooseImage"
+            android:layout_below="@id/btnUpdateImage"
             app:counterTextColor="@color/white"
             android:hint="ID Writer"
             android:textColorHint="@color/light_grey"
@@ -51,7 +51,7 @@
             android:layout_marginTop="20sp" >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/idWriterEditText"
+                android:id="@+id/updateIDWriterEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_background"
@@ -62,11 +62,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputMovieName"
+            android:id="@+id/textInputUpdateMovieName"
             style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textInputIDWriter"
+            android:layout_below="@id/textInputUpdateIDWriter"
             app:counterTextColor="@color/white"
             android:hint="Movie Name"
             android:textColorHint="@color/light_grey"
@@ -76,7 +76,7 @@
             android:layout_marginTop="20sp" >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/movieNameEditText"
+                android:id="@+id/updateMovieNameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_background"
@@ -87,11 +87,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputTahun"
+            android:id="@+id/textInputUpdateTahun"
             style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textInputMovieName"
+            android:layout_below="@id/textInputUpdateMovieName"
             app:counterTextColor="@color/white"
             android:hint="Year"
             android:textColorHint="@color/light_grey"
@@ -101,7 +101,7 @@
             android:layout_marginTop="20sp" >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tahunEditText"
+                android:id="@+id/updateTahunEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_background"
@@ -112,11 +112,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputDirectors"
+            android:id="@+id/textInputUpdateDirectors"
             style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textInputTahun"
+            android:layout_below="@id/textInputUpdateTahun"
             app:counterTextColor="@color/white"
             android:hint="Director"
             android:textColorHint="@color/light_grey"
@@ -126,7 +126,7 @@
             android:layout_marginTop="20sp" >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/directorsEditText"
+                android:id="@+id/updateDirectorsEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_background"
@@ -137,11 +137,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputWriter"
+            android:id="@+id/textInputUpdateWriter"
             style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textInputDirectors"
+            android:layout_below="@id/textInputUpdateDirectors"
             app:counterTextColor="@color/white"
             android:hint="Writer"
             android:textColorHint="@color/light_grey"
@@ -151,7 +151,7 @@
             android:layout_marginTop="20sp" >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/writerEditText"
+                android:id="@+id/updateWriterEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_background"
@@ -162,11 +162,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputGenre"
+            android:id="@+id/textInputUpdateGenre"
             style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textInputWriter"
+            android:layout_below="@id/textInputUpdateWriter"
             app:counterTextColor="@color/white"
             android:hint="Genre"
             android:textColorHint="@color/light_grey"
@@ -176,7 +176,7 @@
             android:layout_marginTop="20sp" >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/genreEditText"
+                android:id="@+id/updateGenreEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_background"
@@ -187,11 +187,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputStars"
+            android:id="@+id/textInputUpdateStars"
             style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textInputGenre"
+            android:layout_below="@id/textInputUpdateGenre"
             app:counterTextColor="@color/white"
             android:hint="Starring"
             android:textColorHint="@color/light_grey"
@@ -201,7 +201,7 @@
             android:layout_marginTop="20sp" >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/starsEditText"
+                android:id="@+id/updateStarsEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_background"
@@ -212,11 +212,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputSinopsis"
+            android:id="@+id/textInputUpdateSinopsis"
             style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textInputStars"
+            android:layout_below="@id/textInputUpdateStars"
             app:counterTextColor="@color/white"
             android:hint="Synopsis"
             android:textColorHint="@color/light_grey"
@@ -226,7 +226,7 @@
             android:layout_marginTop="20sp" >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/sinopsisEditText"
+                android:id="@+id/updateSinopsisEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="top"
@@ -240,17 +240,17 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnInsertDataMovie"
+            android:id="@+id/btnUpdateDataMovie"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_below="@+id/textInputSinopsis"
+            android:layout_below="@+id/textInputUpdateSinopsis"
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/button_rounded_2"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
-            android:text="Add Data"
+            android:text="Update Data"
             android:textColor="@color/white"
             android:textSize="18sp" />
 

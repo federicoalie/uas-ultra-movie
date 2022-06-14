@@ -1,4 +1,4 @@
-package com.gdz.ultramovie;
+package com.gdz.ultramovie.activity;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,8 +16,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.gdz.ultramovie.R;
+import com.gdz.ultramovie.databaseURL;
+import com.gdz.ultramovie.mainActivity.mainMenuAdmin;
+import com.gdz.ultramovie.mainActivity.mainMenuMember;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -113,7 +116,7 @@ public class loginActivity extends AppCompatActivity {
     }
 
     public void btnSignUp(View view) {
-        Intent registerActivity = new Intent(getApplicationContext(), registerActivity.class);
+        Intent registerActivity = new Intent(getApplicationContext(), com.gdz.ultramovie.activity.registerActivity.class);
         startActivity(registerActivity);
     }
 }

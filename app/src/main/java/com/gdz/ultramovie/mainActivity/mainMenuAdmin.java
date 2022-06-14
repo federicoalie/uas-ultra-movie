@@ -1,4 +1,4 @@
-package com.gdz.ultramovie;
+package com.gdz.ultramovie.mainActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -16,8 +16,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.gdz.ultramovie.R;
+import com.gdz.ultramovie.activity.aboutUsActivity;
+import com.gdz.ultramovie.activity.profileActivity;
+import com.gdz.ultramovie.databaseURL;
 import com.gdz.ultramovie.model.movie;
-import com.gdz.ultramovie.model.movieRecyclerViewAdapter;
+import com.gdz.ultramovie.recyclerviewadapter.movieRecyclerViewAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
@@ -25,10 +29,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class mainMenuAdmin extends AppCompatActivity {
-
+    private static final String TAG = "mainMenuAdmin";
     FloatingActionButton fab;
     public String username;
     private final ArrayList<movie> movieArrayList = new ArrayList<>();
@@ -38,6 +41,7 @@ public class mainMenuAdmin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "Created Main Menu");
         setContentView(R.layout.activity_main_menu_admin);
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -51,21 +55,28 @@ public class mainMenuAdmin extends AppCompatActivity {
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
         loadMovieList();
-        movieRecyclerViewAdapter adapter = new movieRecyclerViewAdapter(movieArrayList, this);
-        mRecyclerView.setAdapter(adapter);
+
+
+
 
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent insertMovieData = new Intent(getApplicationContext(), com.gdz.ultramovie.insertMovieData.class);
+                Intent insertMovieData = new Intent(getApplicationContext(), com.gdz.ultramovie.insertData.insertMovieData.class);
                 insertMovieData.putExtra("username", String.valueOf(username));
                 startActivity(insertMovieData);
             }
         });
 
 
+    }
+
+    void setUpAdapter(){
+        movieRecyclerViewAdapter adapter = new movieRecyclerViewAdapter(movieArrayList, this);
+        mRecyclerView.setAdapter(adapter);
     }
 
 
@@ -84,7 +95,9 @@ public class mainMenuAdmin extends AppCompatActivity {
                         movies.setTahunMovie(object.getString("tahun"));
                         movies.setMovie_image(object.getString("image_path"));
                         movieArrayList.add(movies);
+                        Log.d(TAG, "Added : "+ movies.getNamaMovie());
                     }
+                    setUpAdapter();
                 } catch (JSONException e) {
                     Toast.makeText(mainMenuAdmin.this, "Error " +e, Toast.LENGTH_SHORT).show();
                     e.printStackTrace();

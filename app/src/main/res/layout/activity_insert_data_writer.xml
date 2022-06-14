@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".insertData.insertDataWriter">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputInsertIDWriter"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterTextColor="@color/white"
+        android:hint="ID Writer"
+        android:textColorHint="@color/light_grey"
+        app:hintTextColor="@color/grey_white"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30sp" >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/insertIDWriterEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:inputType="number"
+        android:textColor="@color/grey_white"
+        android:textCursorDrawable="@drawable/cursor_modified" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputInsertWriter"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputInsertIDWriter"
+        app:counterTextColor="@color/white"
+        android:hint="Writer Name"
+        android:textColorHint="@color/light_grey"
+        app:hintTextColor="@color/grey_white"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20sp" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/insertWriterEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:inputType="text"
+            android:textColor="@color/grey_white"
+            android:textCursorDrawable="@drawable/cursor_modified" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputInsertEmail"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputInsertWriter"
+        app:counterTextColor="@color/white"
+        android:hint="Email"
+        android:textColorHint="@color/light_grey"
+        app:hintTextColor="@color/grey_white"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20sp" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/insertEmailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/grey_white"
+            android:textCursorDrawable="@drawable/cursor_modified" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputInsertTelephone"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputInsertEmail"
+        app:counterTextColor="@color/white"
+        android:hint="Telephone"
+        android:textColorHint="@color/light_grey"
+        app:hintTextColor="@color/grey_white"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20sp" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/insertTelephoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:inputType="number"
+            android:textColor="@color/grey_white"
+            android:textCursorDrawable="@drawable/cursor_modified" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnInsertDataWriter"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/textInputInsertTelephone"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/button_rounded_2"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Add Data"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout>

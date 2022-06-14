@@ -1,10 +1,14 @@
-package com.gdz.ultramovie;
+package com.gdz.ultramovie.mainActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.gdz.ultramovie.R;
+import com.gdz.ultramovie.activity.aboutUsActivity;
+import com.gdz.ultramovie.activity.profileActivity;
 
 public class mainMenuMember extends AppCompatActivity {
 

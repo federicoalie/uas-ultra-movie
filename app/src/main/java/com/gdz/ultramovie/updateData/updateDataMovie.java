@@ -1,14 +1,16 @@
-package com.gdz.ultramovie;
+package com.gdz.ultramovie.updateData;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class aboutUsActivity extends AppCompatActivity {
+import com.gdz.ultramovie.R;
+
+public class updateDataMovie extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about_us);
+        setContentView(R.layout.activity_update_data_movie);
     }
 }

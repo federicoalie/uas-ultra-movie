@@ -1,4 +1,4 @@
-package com.gdz.ultramovie;
+package com.gdz.ultramovie.activity;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +21,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.gdz.ultramovie.R;
+import com.gdz.ultramovie.databaseURL;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;

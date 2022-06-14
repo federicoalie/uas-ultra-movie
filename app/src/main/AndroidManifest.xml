@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.gdz.ultramovie" >
+    package="com.gdz.ultramovie">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,40 +20,55 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UltraMovie"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31" >
+        tools:targetApi="31">
         <activity
-            android:name=".insertMovieData"
+            android:name=".updateDataWriter"
             android:exported="false" />
         <activity
-            android:name=".writerActivity"
+            android:name=".updateData.updateDataGenre"
             android:exported="false" />
         <activity
-            android:name=".genreActivity"
+            android:name=".updateData.updateDataMovie"
             android:exported="false" />
         <activity
-            android:name=".movieDetailActivity"
+            android:name=".insertData.insertDataGenre"
             android:exported="false" />
         <activity
-            android:name=".mainMenuMember"
+            android:name=".insertData.insertDataWriter"
             android:exported="false" />
         <activity
-            android:name=".profileActivity"
+            android:name=".insertData.insertMovieData"
             android:exported="false" />
         <activity
-            android:name=".mainMenuAdmin"
+            android:name=".activity.writerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.genreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.movieDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mainActivity.mainMenuMember"
+            android:exported="false" />
+        <activity
+            android:name=".activity.profileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mainActivity.mainMenuAdmin"
             android:exported="true" />
         <activity
-            android:name=".aboutUsActivity"
+            android:name=".activity.aboutUsActivity"
             android:exported="false" />
         <activity
-            android:name=".registerActivity"
+            android:name=".activity.registerActivity"
             android:exported="false" />
         <activity
-            android:name=".loginActivity"
+            android:name=".activity.loginActivity"
             android:exported="false" />
         <activity
-            android:name=".splashScreen"
-            android:exported="true" >
+            android:name=".activity.splashScreen"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

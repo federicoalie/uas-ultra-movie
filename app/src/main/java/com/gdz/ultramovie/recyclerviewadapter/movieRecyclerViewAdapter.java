@@ -1,4 +1,4 @@
-package com.gdz.ultramovie.model;
+package com.gdz.ultramovie.recyclerviewadapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -15,22 +14,22 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.gdz.ultramovie.R;
-import com.gdz.ultramovie.movieDetailActivity;
+import com.gdz.ultramovie.model.movie;
+import com.gdz.ultramovie.activity.movieDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class movieRecyclerViewAdapter extends RecyclerView.Adapter<movieRecyclerViewAdapter.myViewHolder> {
 
-    private static final String TAG = "movieRecyclerViewAdapte";
+    private static final String TAG = "movieRecyclerViewAdapter";
     private final ArrayList<movie> movies;
     private final Context context;
 
     public movieRecyclerViewAdapter(ArrayList<movie> movieArrayList, Context context){
         this.movies = movieArrayList;
         this.context = context;
-
+        Log.d("mainMenuAdmin", "Adapter List size : " + movieArrayList.size() );
     }
 
     @NonNull

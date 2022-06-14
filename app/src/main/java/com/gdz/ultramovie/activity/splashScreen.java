@@ -1,10 +1,13 @@
-package com.gdz.ultramovie;
+package com.gdz.ultramovie.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.gdz.ultramovie.R;
+import com.gdz.ultramovie.activity.loginActivity;
 
 public class splashScreen extends AppCompatActivity {
 

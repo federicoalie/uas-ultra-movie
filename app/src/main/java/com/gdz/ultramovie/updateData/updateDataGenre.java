@@ -1,14 +1,16 @@
-package com.gdz.ultramovie;
+package com.gdz.ultramovie.updateData;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class writerActivity extends AppCompatActivity {
+import com.gdz.ultramovie.R;
+
+public class updateDataGenre extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_writer);
+        setContentView(R.layout.activity_update_data_genre);
     }
 }
