@@ -32,233 +32,250 @@
         android:layout_below="@+id/logo_ultra"
         android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/montserrat_bold"
+        android:fontFamily="sans-serif-black"
         android:text="Sign Up"
         android:textColor="@color/white"
         android:textSize="40sp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputFullName"
-        style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+    <ScrollView
+        android:id="@+id/scrollViewRegister"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textSignUp"
-        app:counterEnabled="true"
-        app:counterTextColor="@color/white"
-        app:counterMaxLength="22"
-        android:hint="Full Name"
-        android:textColorHint="@color/light_grey"
-        app:hintTextColor="@color/grey_white"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="20sp" >
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textSignUp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextFullName"
+        <RelativeLayout
+            android:id="@+id/relativeRegister"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLength="22"
-            android:background="@drawable/edit_text_background"
-            android:textColor="@color/grey_white"
-            android:textCursorDrawable="@drawable/cursor_modified"
-            android:inputType="text"/>
+            android:layout_height="wrap_content">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputFullName"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                app:counterTextColor="@color/white"
+                app:counterMaxLength="22"
+                android:hint="Full Name"
+                android:textColorHint="@color/light_grey"
+                app:hintTextColor="@color/grey_white"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="20sp" >
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputUsername"
-        style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textInputFullName"
-        app:counterEnabled="true"
-        app:counterTextColor="@color/white"
-        app:counterMaxLength="22"
-        android:hint="Username"
-        android:textColorHint="@color/light_grey"
-        app:hintTextColor="@color/grey_white"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="5sp" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="22"
+                    android:background="@drawable/edit_text_background"
+                    android:textColor="@color/grey_white"
+                    android:textCursorDrawable="@drawable/cursor_modified"
+                    android:inputType="text"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLength="22"
-            android:background="@drawable/edit_text_background"
-            android:textColor="@color/grey_white"
-            android:textCursorDrawable="@drawable/cursor_modified"
-            android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputUsername"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textInputFullName"
+                app:counterEnabled="true"
+                app:counterTextColor="@color/white"
+                app:counterMaxLength="22"
+                android:hint="Username"
+                android:textColorHint="@color/light_grey"
+                app:hintTextColor="@color/grey_white"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="5sp" >
 
-    <TextView
-        android:id="@+id/textJenisKelamin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="40sp"
-        android:layout_below="@id/textInputUsername"
-        android:text="Jenis Kelamin"
-        android:fontFamily="sans-serif-black"
-        android:textSize="22sp"
-        android:textColor="@color/white" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="22"
+                    android:background="@drawable/edit_text_background"
+                    android:textColor="@color/grey_white"
+                    android:textCursorDrawable="@drawable/cursor_modified"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textJenisKelamin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="40sp"
+                android:layout_below="@id/textInputUsername"
+                android:text="Jenis Kelamin"
+                android:fontFamily="sans-serif-black"
+                android:textSize="22sp"
+                android:textColor="@color/white" />
 
 
-    <RadioGroup
-        android:id="@+id/groupRadio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40sp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/textJenisKelamin"
-        android:orientation="horizontal">
+            <RadioGroup
+                android:id="@+id/groupRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textJenisKelamin"
+                android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/rdLaki"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/red"
-            android:gravity="center_horizontal|center"
-            android:layout_marginEnd="10dp"
-            android:text="Laki-Laki"
-            android:checked="true"
-            android:textColor="@color/white"
-            android:fontFamily="sans-serif-black"
-            android:textSize="18sp"/>
+                <RadioButton
+                    android:id="@+id/rdLaki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/red"
+                    android:gravity="center_horizontal|center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Laki-Laki"
+                    android:checked="true"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="18sp"/>
 
-        <RadioButton
-            android:id="@+id/rdPerempuan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal|center"
-            android:buttonTint="@color/red"
-            android:layout_marginStart="28dp"
-            android:text="Perempuan"
-            android:textColor="@color/white"
-            android:fontFamily="sans-serif-black"
-            android:textSize="18sp" />
+                <RadioButton
+                    android:id="@+id/rdPerempuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center"
+                    android:buttonTint="@color/red"
+                    android:layout_marginStart="28dp"
+                    android:text="Perempuan"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="18sp" />
 
-    </RadioGroup>
+            </RadioGroup>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputCountry"
-        style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/groupRadio"
-        android:hint="Country"
-        android:textColorHint="@color/light_grey"
-        app:hintTextColor="@color/grey_white"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="10sp" >
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputCountry"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/groupRadio"
+                android:hint="Country"
+                android:textColorHint="@color/light_grey"
+                app:hintTextColor="@color/grey_white"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10sp" >
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextCountry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:textColor="@color/grey_white"
-            android:textCursorDrawable="@drawable/cursor_modified"
-            android:inputType="text"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    android:textColor="@color/grey_white"
+                    android:textCursorDrawable="@drawable/cursor_modified"
+                    android:inputType="text"/>
 
-    </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputPassword"
-        style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textInputCountry"
-        android:hint="Password"
-        app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/grey_white"
-        android:textColorHint="@color/light_grey"
-        app:hintTextColor="@color/grey_white"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="10sp" >
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPassword"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textInputCountry"
+                android:hint="Password"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/grey_white"
+                android:textColorHint="@color/light_grey"
+                app:hintTextColor="@color/grey_white"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10sp" >
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:textColor="@color/grey_white"
-            android:textCursorDrawable="@drawable/cursor_modified"
-            android:inputType="textPassword"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    android:textColor="@color/grey_white"
+                    android:textCursorDrawable="@drawable/cursor_modified"
+                    android:inputType="textPassword"/>
 
-    </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputConfirmPassword"
-        style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textInputPassword"
-        android:hint="Confirm Password"
-        app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/grey_white"
-        android:textColorHint="@color/light_grey"
-        app:hintTextColor="@color/grey_white"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="10sp" >
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputConfirmPassword"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textInputPassword"
+                android:hint="Confirm Password"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/grey_white"
+                android:textColorHint="@color/light_grey"
+                app:hintTextColor="@color/grey_white"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10sp" >
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:textColor="@color/grey_white"
-            android:textCursorDrawable="@drawable/cursor_modified"
-            android:inputType="textPassword"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    android:textColor="@color/grey_white"
+                    android:textCursorDrawable="@drawable/cursor_modified"
+                    android:inputType="textPassword"/>
 
-    </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSignIn"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@id/textInputConfirmPassword"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="85dp"
-        android:background="@drawable/button_rounded"
-        android:fontFamily="sans-serif-black"
-        android:text="Sign Up"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="26sp" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/textInputConfirmPassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="85dp"
+                android:background="@drawable/button_rounded"
+                android:fontFamily="sans-serif-black"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="26sp" />
 
-    <TextView
-        android:id="@+id/textDont"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnSignIn"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Already have an Account ? "
-        android:textColor="@color/light_grey"
-        android:textSize="16sp" />
+            <TextView
+                android:id="@+id/textDont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnSignIn"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Already have an Account ? "
+                android:textColor="@color/light_grey"
+                android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/txtViewSignIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnSignIn"
-        android:layout_marginStart="15sp"
-        android:layout_marginTop="18dp"
-        android:layout_toEndOf="@+id/textDont"
-        android:fontFamily="sans-serif-black"
-        android:onClick="btnSignIn"
-        android:text="Sign In"
-        android:textColor="@color/white"
-        android:textSize="18sp" />
+            <TextView
+                android:id="@+id/txtViewSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnSignIn"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="18dp"
+                android:layout_toEndOf="@+id/textDont"
+                android:fontFamily="sans-serif-black"
+                android:onClick="btnSignIn"
+                android:text="Sign In"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
 
 
 </RelativeLayout>

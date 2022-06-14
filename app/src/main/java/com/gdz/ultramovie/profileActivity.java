@@ -36,6 +36,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class profileActivity extends AppCompatActivity {
 
+    private static final String TAG = "profileActivity";
     CircleImageView profileImage;
     Button btnSignOut;
     String username, prfImage;
@@ -95,6 +96,7 @@ public class profileActivity extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response);
                     if(!jsonObject.getBoolean("errormsg")){
                         Toast.makeText(profileActivity.this, "Upload Succeed!", Toast.LENGTH_SHORT).show();
+
                     }
 
                 } catch (JSONException e) {
@@ -117,7 +119,6 @@ public class profileActivity extends AppCompatActivity {
                 return params;
             }
         };
-
         Volley.newRequestQueue(this).add(request);
     }
 
@@ -160,7 +161,13 @@ public class profileActivity extends AppCompatActivity {
                         setCountry.setText(object.getString("asal_negara"));
                         setGender.setText(object.getString("jenis_kelamin"));
                         prfImage = object.getString("image_path");
-                        Picasso.get().load(prfImage).into(profileImage);
+
+                        if(prfImage.isEmpty()){
+                            Log.d(TAG, "onResponse: " + response);
+                        }
+                        else {
+                            Picasso.get().load(prfImage).into(profileImage);
+                        }
 
                     }
 

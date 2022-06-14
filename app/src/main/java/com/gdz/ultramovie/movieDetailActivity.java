@@ -55,6 +55,8 @@ public class movieDetailActivity extends AppCompatActivity {
 
     }
 
+
+
     public void showAllMovieData(){
         StringRequest stringRequest = new StringRequest(Request.Method.POST, databaseURL.viewAllDataMovie, new Response.Listener<String>() {
             @Override
@@ -66,12 +68,12 @@ public class movieDetailActivity extends AppCompatActivity {
                     for(int i = 0; i < jsonArray.length(); i++){
                         JSONObject object = jsonArray.getJSONObject(i);
                         setJudulDetailMovie.setText(movieName);
-                        setGenre.setText(object.getString("genre_movie"));
+                        setGenre.setText(object.getString("genre"));
                         setDirector.setText(object.getString("directors"));
                         setWriter.setText(object.getString("writer"));
                         setStar.setText(object.getString("stars"));
                         setSinopsis.setText(object.getString("sinopsis"));
-                        mvImage = object.getString("gambar_movie");
+                        mvImage = object.getString("image_path");
 
                         Picasso.get().load(mvImage).into(setImageDetailMovie);
 
@@ -98,11 +100,4 @@ public class movieDetailActivity extends AppCompatActivity {
         Volley.newRequestQueue(this).add(stringRequest);
     }
 
-    public void btnProfileDetailMovie(View view) {
-
-    }
-
-    public void btnAboutUsDetailMovie(View view) {
-
-    }
 }

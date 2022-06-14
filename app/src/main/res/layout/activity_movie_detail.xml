@@ -11,66 +11,11 @@
         android:id="@+id/logo_ultra"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/logo_ultra" />
 
-    <LinearLayout
-        android:id="@+id/linearProfileDetailMovie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:layout_alignParentEnd="true"
-        android:orientation="vertical"
-        android:onClick="btnProfileDetailMovie">
-
-        <ImageView
-            android:id="@+id/icon_profile"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            android:src="@drawable/user" />
-
-        <TextView
-            android:id="@+id/text_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:text="Profile"
-            android:textColor="@color/white"
-            android:fontFamily="@font/montserrat_bold" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linear_AboutUsAdmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:layout_marginTop="7dp"
-        android:layout_toStartOf="@+id/linearProfileDetailMovie"
-        android:orientation="vertical"
-        android:onClick="btnAboutUsDetailMovie">
-
-        <ImageView
-            android:id="@+id/icon_aboutUs"
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:layout_gravity="center"
-            android:src="@drawable/info" />
-
-        <TextView
-            android:id="@+id/text_aboutUs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:text="About Us"
-            android:textColor="@color/white"
-            android:fontFamily="@font/montserrat_bold" />
-
-    </LinearLayout>
 
     <ImageView
         android:id="@+id/getImageViewMovieDetail"
@@ -265,13 +210,14 @@
             android:layout_marginStart="2dp"
             android:paddingTop="5dp"
             android:paddingStart="5dp"
-            android:paddingEnd="0dp"
+            android:paddingEnd="5dp"
             android:background="@drawable/text_view_background"
             android:gravity="start"
+            android:scrollbars="vertical"
             android:text="Professor Albus Dumbledore learns the powerful Dark wizard Gellert Grindelwald is on the move to rule the wizarding world. Unable to stop him alone, he entrusts Magizoologist Newt Scamander to lead a team of wizards and an intrepid Muggle baker on a dangerous mission."
             android:textColor="@color/white"
             android:fontFamily="sans-serif-black"
-            android:textSize="15sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".insertMovieData">
+
+    <RelativeLayout
+        android:id="@+id/relativeParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageViewMovie"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnChooseImage"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/imageViewMovie"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/button_rounded_2"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Choose Movie Poster"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputIDWriter"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnChooseImage"
+            app:counterTextColor="@color/white"
+            android:hint="ID Writer"
+            android:textColorHint="@color/light_grey"
+            app:hintTextColor="@color/grey_white"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20sp" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idWriterEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:inputType="text"
+                android:textColor="@color/grey_white"
+                android:textCursorDrawable="@drawable/cursor_modified" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputMovieName"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInputIDWriter"
+            app:counterTextColor="@color/white"
+            android:hint="Movie Name"
+            android:textColorHint="@color/light_grey"
+            app:hintTextColor="@color/grey_white"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20sp" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/movieNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:inputType="text"
+                android:textColor="@color/grey_white"
+                android:textCursorDrawable="@drawable/cursor_modified" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputTahun"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInputMovieName"
+            app:counterTextColor="@color/white"
+            android:hint="Year"
+            android:textColorHint="@color/light_grey"
+            app:hintTextColor="@color/grey_white"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20sp" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tahunEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:inputType="text"
+                android:textColor="@color/grey_white"
+                android:textCursorDrawable="@drawable/cursor_modified" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputDirectors"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInputTahun"
+            app:counterTextColor="@color/white"
+            android:hint="Director"
+            android:textColorHint="@color/light_grey"
+            app:hintTextColor="@color/grey_white"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20sp" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/directorsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:inputType="text"
+                android:textColor="@color/grey_white"
+                android:textCursorDrawable="@drawable/cursor_modified" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputWriter"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInputDirectors"
+            app:counterTextColor="@color/white"
+            android:hint="Writer"
+            android:textColorHint="@color/light_grey"
+            app:hintTextColor="@color/grey_white"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20sp" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/writerEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:inputType="text"
+                android:textColor="@color/grey_white"
+                android:textCursorDrawable="@drawable/cursor_modified" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputGenre"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInputWriter"
+            app:counterTextColor="@color/white"
+            android:hint="Genre"
+            android:textColorHint="@color/light_grey"
+            app:hintTextColor="@color/grey_white"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20sp" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/genreEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:inputType="text"
+                android:textColor="@color/grey_white"
+                android:textCursorDrawable="@drawable/cursor_modified" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputStars"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInputGenre"
+            app:counterTextColor="@color/white"
+            android:hint="Starring"
+            android:textColorHint="@color/light_grey"
+            app:hintTextColor="@color/grey_white"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20sp" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/starsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:inputType="text"
+                android:textColor="@color/grey_white"
+                android:textCursorDrawable="@drawable/cursor_modified" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputSinopsis"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textInputStars"
+            app:counterTextColor="@color/white"
+            android:hint="Synopsis"
+            android:textColorHint="@color/light_grey"
+            app:hintTextColor="@color/grey_white"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20sp" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sinopsisEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:scrollbars="vertical"
+                android:background="@drawable/edit_text_background"
+                android:inputType="text|textMultiLine|textCapSentences"
+                android:lines="10"
+                android:textColor="@color/grey_white"
+                android:textCursorDrawable="@drawable/cursor_modified" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnInsertDataMovie"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/textInputSinopsis"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_rounded_2"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Insert Data"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</ScrollView>

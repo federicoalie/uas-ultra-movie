@@ -31,7 +31,7 @@
             android:textSize="14sp"
             android:text="Profile"
             android:textColor="@color/white"
-            android:fontFamily="@font/montserrat_bold" />
+            android:fontFamily="sans-serif-black" />
 
     </LinearLayout>
 
@@ -59,7 +59,7 @@
             android:textSize="14sp"
             android:text="About Us"
             android:textColor="@color/white"
-            android:fontFamily="@font/montserrat_bold" />
+            android:fontFamily="sans-serif-black" />
 
     </LinearLayout>
 
@@ -77,12 +77,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo_ultra"
-        android:layout_marginTop="30sp"
         android:layout_marginStart="45dp"
+        android:layout_marginTop="30sp"
+        android:fontFamily="sans-serif-black"
         android:text="MOVIES"
-        android:textSize="25sp"
-        android:fontFamily="@font/montserrat_bold"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textSize="25sp" />
 
     <View
         android:layout_width="1dp"

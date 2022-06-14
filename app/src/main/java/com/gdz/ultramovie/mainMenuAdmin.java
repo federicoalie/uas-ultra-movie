@@ -29,7 +29,8 @@ import java.util.List;
 
 public class mainMenuAdmin extends AppCompatActivity {
 
-    String username;
+    FloatingActionButton fab;
+    public String username;
     private final ArrayList<movie> movieArrayList = new ArrayList<>();
     private RecyclerView mRecyclerView;
 
@@ -44,15 +45,25 @@ public class mainMenuAdmin extends AppCompatActivity {
             username = bundle.getString("username");
         }
 
+        fab = findViewById(R.id.floatActionInsertMovie);
         mRecyclerView = findViewById(R.id.recyclerMovieAdmin);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        movieRecyclerViewAdapter adapter = new movieRecyclerViewAdapter(movieArrayList, this);
         loadMovieList();
+        movieRecyclerViewAdapter adapter = new movieRecyclerViewAdapter(movieArrayList, this);
         mRecyclerView.setAdapter(adapter);
 
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent insertMovieData = new Intent(getApplicationContext(), com.gdz.ultramovie.insertMovieData.class);
+                insertMovieData.putExtra("username", String.valueOf(username));
+                startActivity(insertMovieData);
+            }
+        });
 
 
     }
@@ -71,7 +82,7 @@ public class mainMenuAdmin extends AppCompatActivity {
                         movie movies = new movie();
                         movies.setNamaMovie(object.getString("nama_movie"));
                         movies.setTahunMovie(object.getString("tahun"));
-                        movies.setMovie_image(object.getString("gambar_movie"));
+                        movies.setMovie_image(object.getString("image_path"));
                         movieArrayList.add(movies);
                     }
                 } catch (JSONException e) {
