@@ -5,7 +5,7 @@
     android:background="@color/black">
 
     <ImageView
-        android:id="@+id/imagePoster"
+        android:id="@+id/imagePosterMember"
         android:layout_width="160dp"
         android:layout_height="200dp"
         android:layout_marginStart="5dp"
@@ -20,11 +20,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/imagePoster"
+        android:layout_toEndOf="@+id/imagePosterMember"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtJudul"
+            android:id="@+id/txtJudulMember"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
@@ -33,7 +33,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/txtTahun"
+            android:id="@+id/txtTahunMember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

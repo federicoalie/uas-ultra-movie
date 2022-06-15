@@ -10,6 +10,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -36,6 +38,7 @@ public class writerActivity extends AppCompatActivity implements writerRecyclerV
     private final ArrayList<writer> writerArrayList = new ArrayList<>();
     String username, id;
     RecyclerView wRecyclerView;
+    Button btnAddDataWriter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,7 @@ public class writerActivity extends AppCompatActivity implements writerRecyclerV
             username = bundle.getString("username");
         }
 
+        btnAddDataWriter = findViewById(R.id.btnAddDataWriter);
         wRecyclerView = findViewById(R.id.recyclerViewWriter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         wRecyclerView.setLayoutManager(layoutManager);
@@ -55,6 +59,14 @@ public class writerActivity extends AppCompatActivity implements writerRecyclerV
 
         showDataWriter();
 
+        btnAddDataWriter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent addWriter = new Intent(getApplicationContext(), com.gdz.ultramovie.insertData.insertDataWriter.class);
+                addWriter.putExtra("username", String.valueOf(username));
+                startActivity(addWriter);
+            }
+        });
     }
 
     public void showDataWriter(){

@@ -29,7 +29,7 @@
         android:gravity="start"
         android:text="Kelompok 2 - 4PBD51"
         android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:textSize="28sp" />
 
     <TextView
         android:id="@+id/textAnggotaKelompok"
@@ -38,11 +38,11 @@
         android:layout_below="@+id/textJudulAnggotaKelompok"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
         android:gravity="start"
         android:text="35200084 - Kiara Amor Senhor Ariana\n35200090 - Cindy Caroline Sukamto\n35200092 - Joey Nathaniel Rudiono\n35200094 - Federico Alie"
         android:textColor="@color/white"
-        android:fontFamily="sans-serif-black"
-        android:textSize="14sp" />
+        android:textSize="18sp" />
 
     <ImageView
         android:id="@+id/logo_ubm"

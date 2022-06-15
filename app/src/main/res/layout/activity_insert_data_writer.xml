@@ -7,36 +7,12 @@
     android:background="@color/black"
     tools:context=".insertData.insertDataWriter">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputInsertIDWriter"
-        style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:counterTextColor="@color/white"
-        android:hint="ID Writer"
-        android:textColorHint="@color/light_grey"
-        app:hintTextColor="@color/grey_white"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="30sp" >
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/insertIDWriterEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_background"
-        android:inputType="number"
-        android:textColor="@color/grey_white"
-        android:textCursorDrawable="@drawable/cursor_modified" />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputInsertWriter"
         style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textInputInsertIDWriter"
         app:counterTextColor="@color/white"
         android:hint="Writer Name"
         android:textColorHint="@color/light_grey"
@@ -100,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_background"
-            android:inputType="number"
+            android:inputType="phone"
             android:textColor="@color/grey_white"
             android:textCursorDrawable="@drawable/cursor_modified" />
 

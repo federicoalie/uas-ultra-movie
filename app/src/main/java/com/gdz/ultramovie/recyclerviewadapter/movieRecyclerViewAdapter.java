@@ -77,7 +77,6 @@ public class movieRecyclerViewAdapter extends RecyclerView.Adapter<movieRecycler
         private final TextView judul, tahun;
         private final ImageView image;
         TextView id;
-        RelativeLayout parent;
         movie movie;
         onMovieClickListener onMovieClickListener;
 
@@ -86,7 +85,6 @@ public class movieRecyclerViewAdapter extends RecyclerView.Adapter<movieRecycler
             judul = itemView.findViewById(R.id.txtJudul);
             tahun = itemView.findViewById(R.id.txtTahun);
             image = itemView.findViewById(R.id.imagePoster);
-            parent = itemView.findViewById(R.id.parent_layout);
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
 
