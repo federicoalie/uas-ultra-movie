@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,7 +45,7 @@ public class movieDetailActivity extends AppCompatActivity {
         setSinopsis = findViewById(R.id.getSinopsis);
         setDirector = findViewById(R.id.getDirectors);
         setImageDetailMovie = findViewById(R.id.getImageViewMovieDetail);
-
+        setSinopsis.setMovementMethod(new ScrollingMovementMethod());
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         if(bundle!=null){

@@ -118,5 +118,6 @@ public class loginActivity extends AppCompatActivity {
     public void btnSignUp(View view) {
         Intent registerActivity = new Intent(getApplicationContext(), com.gdz.ultramovie.activity.registerActivity.class);
         startActivity(registerActivity);
+
     }
 }

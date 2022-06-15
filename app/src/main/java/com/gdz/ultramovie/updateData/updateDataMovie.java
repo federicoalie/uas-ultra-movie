@@ -151,7 +151,7 @@ public class updateDataMovie extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response);
                     if (!jsonObject.getBoolean("errormsg")){
                         Log.d(TAG, "SUCCESS");
-                        Toast.makeText(updateDataMovie.this, "Movie " + movieName + " Berhasil di Update", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(updateDataMovie.this, "Movie " + movieName + " Updated Successfuly!", Toast.LENGTH_SHORT).show();
                         Intent toMainMenu = new Intent(getApplicationContext(), mainMenuAdmin.class);
                         toMainMenu.putExtra("username", String.valueOf(username));
                         finish();

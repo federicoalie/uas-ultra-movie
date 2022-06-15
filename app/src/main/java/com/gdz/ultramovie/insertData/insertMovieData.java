@@ -177,6 +177,7 @@ public class insertMovieData extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response);
                     if (!jsonObject.getBoolean("errormsg")){
                         Log.d(TAG, "SUCCESS");
+                        Toast.makeText(insertMovieData.this, "Movie Added!", Toast.LENGTH_SHORT).show();
                         Intent backToMainMenu = new Intent(getApplicationContext(), mainMenuAdmin.class);
                         backToMainMenu.putExtra("username", username);
                         finish();
