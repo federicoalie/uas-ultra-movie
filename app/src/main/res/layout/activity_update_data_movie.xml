@@ -13,7 +13,7 @@
         android:layout_height="wrap_content" >
 
         <ImageView
-            android:id="@+id/imageViewMovie"
+            android:id="@+id/imageViewUpdateMovie"
             android:layout_width="200dp"
             android:layout_height="250dp"
             android:layout_centerHorizontal="true"
@@ -25,7 +25,7 @@
             android:id="@+id/btnUpdateImage"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_below="@+id/imageViewMovie"
+            android:layout_below="@+id/imageViewUpdateMovie"
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
@@ -35,6 +35,8 @@
             android:text="Choose Movie Poster"
             android:textColor="@color/white"
             android:textSize="18sp" />
+
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputUpdateIDWriter"

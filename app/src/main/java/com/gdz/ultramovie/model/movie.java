@@ -7,6 +7,16 @@ public class movie {
     String namaMovie;
     String tahunMovie;
     String movie_image;
+    String idMovie;
+
+
+    public String getIdMovie() {
+        return idMovie;
+    }
+
+    public void setIdMovie(String idMovie) {
+        this.idMovie = idMovie;
+    }
 
 
     public String getNamaMovie() {

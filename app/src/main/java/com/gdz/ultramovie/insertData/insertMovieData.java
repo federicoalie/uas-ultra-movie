@@ -120,6 +120,7 @@ public class insertMovieData extends AppCompatActivity {
                     sinopsis.requestFocus();
                 }
                 else {
+
                     uploadDataToDatabase(idWriter, movieName, years, getStringImage(bitmap), directors, writer, genres, stars, synopsis);
                 }
 

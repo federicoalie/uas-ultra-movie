@@ -1,6 +1,8 @@
 package com.gdz.ultramovie.recyclerviewadapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,26 +11,41 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.gdz.ultramovie.R;
 import com.gdz.ultramovie.model.movie;
 import com.gdz.ultramovie.activity.movieDetailActivity;
+import com.gdz.ultramovie.databaseURL;
+import com.gdz.ultramovie.mainActivity.mainMenuAdmin;
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class movieRecyclerViewAdapter extends RecyclerView.Adapter<movieRecyclerViewAdapter.myViewHolder> {
 
     private static final String TAG = "movieRecyclerViewAdapter";
+    private onMovieClickListener movieClickListener;
     private final ArrayList<movie> movies;
-    private final Context context;
 
-    public movieRecyclerViewAdapter(ArrayList<movie> movieArrayList, Context context){
+    public movieRecyclerViewAdapter(ArrayList<movie> movieArrayList, onMovieClickListener onMovieClickListener){
         this.movies = movieArrayList;
-        this.context = context;
+        this.movieClickListener = onMovieClickListener;
         Log.d("mainMenuAdmin", "Adapter List size : " + movieArrayList.size() );
     }
 
@@ -45,18 +62,10 @@ public class movieRecyclerViewAdapter extends RecyclerView.Adapter<movieRecycler
         String img = movies.get(position).getMovie_image();
         holder.judul.setText(movies.get(position).getNamaMovie());
         holder.tahun.setText(movies.get(position).getTahunMovie());
+        holder.id.setText(movies.get(position).getIdMovie());
         Picasso.get().load(img).error(R.mipmap.ic_launcher).placeholder(R.mipmap.ic_launcher_round).into(holder.image);
 
-        holder.parent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d(TAG, "onClick: pressed " + holder.judul.getText());
-                Intent movieDetail = new Intent(context, movieDetailActivity.class);
-                movieDetail.putExtra("movie_name", holder.judul.getText());
-                context.startActivity(movieDetail);
-            }
-        });
-
+        holder.bind(movies.get(position), this.movieClickListener);
     }
 
     @Override
@@ -64,10 +73,13 @@ public class movieRecyclerViewAdapter extends RecyclerView.Adapter<movieRecycler
         return movies.size();
     }
 
-    public static class myViewHolder extends RecyclerView.ViewHolder{
+    public static class myViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener{
         private final TextView judul, tahun;
         private final ImageView image;
+        TextView id;
         RelativeLayout parent;
+        movie movie;
+        onMovieClickListener onMovieClickListener;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -75,7 +87,35 @@ public class movieRecyclerViewAdapter extends RecyclerView.Adapter<movieRecycler
             tahun = itemView.findViewById(R.id.txtTahun);
             image = itemView.findViewById(R.id.imagePoster);
             parent = itemView.findViewById(R.id.parent_layout);
+            itemView.setOnClickListener(this);
+            itemView.setOnLongClickListener(this);
+
+            id = itemView.findViewById(R.id.IDMovie);
+        }
+
+
+        public void bind(movie movie, onMovieClickListener onMovieClickListener)
+        {
+            this.movie = movie;
+            this.onMovieClickListener = onMovieClickListener;
 
         }
+
+        @Override
+        public void onClick(View view) {
+            onMovieClickListener.onMovieClick(movie, this.getLayoutPosition());
+        }
+
+        @Override
+        public boolean onLongClick(View view) {
+            onMovieClickListener.onMovieLongClick(movie, this.getLayoutPosition());
+            return true;
+        }
+    }
+
+    public interface onMovieClickListener{
+        void onMovieClick(movie movie, int position);
+        void onMovieLongClick(movie movie, int position);
+
     }
 }

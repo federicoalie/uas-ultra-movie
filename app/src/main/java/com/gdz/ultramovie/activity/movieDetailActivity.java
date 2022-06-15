@@ -80,14 +80,14 @@ public class movieDetailActivity extends AppCompatActivity {
 
                     }
                 } catch (JSONException e) {
-                    Toast.makeText(movieDetailActivity.this, "Error a" + e, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(movieDetailActivity.this, "Error " + e, Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(movieDetailActivity.this, "Error b" + error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(movieDetailActivity.this, "Error " + error, Toast.LENGTH_SHORT).show();
             }
         }){
             @Nullable
