@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_background"
-            android:inputType="number"
+            android:inputType="text"
             android:textColor="@color/grey_white"
             android:textCursorDrawable="@drawable/cursor_modified" />
 
@@ -57,7 +57,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnInsertDataWriter"
+        android:id="@+id/btnInsertDataGenre"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_below="@+id/textInputInsertGenre"

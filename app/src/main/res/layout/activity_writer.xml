@@ -8,7 +8,7 @@
     tools:context=".activity.writerActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerWriter"
+        android:id="@+id/recyclerViewWriter"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/linearBottomWriter" />

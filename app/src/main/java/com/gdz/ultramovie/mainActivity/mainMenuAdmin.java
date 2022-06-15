@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -23,6 +24,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.gdz.ultramovie.R;
 import com.gdz.ultramovie.activity.aboutUsActivity;
+import com.gdz.ultramovie.activity.genreActivity;
 import com.gdz.ultramovie.activity.movieDetailActivity;
 import com.gdz.ultramovie.activity.profileActivity;
 import com.gdz.ultramovie.databaseURL;
@@ -45,11 +47,13 @@ public class mainMenuAdmin extends AppCompatActivity implements movieRecyclerVie
     public String username, nama_movie, id_movie;
     private final ArrayList<movie> movieArrayList = new ArrayList<>();
     private RecyclerView mRecyclerView;
+    Button btnGenre, btnWriter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Log.d(TAG, "Created Main Menu");
         setContentView(R.layout.activity_main_menu_admin);
         Intent intent = getIntent();
@@ -58,6 +62,9 @@ public class mainMenuAdmin extends AppCompatActivity implements movieRecyclerVie
             username = bundle.getString("username");
         }
 
+
+        btnGenre = findViewById(R.id.btnToGenre);
+        btnWriter = findViewById(R.id.btnToWriter);
         fab = findViewById(R.id.floatActionInsertMovie);
         mRecyclerView = findViewById(R.id.recyclerMovieAdmin);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -74,6 +81,24 @@ public class mainMenuAdmin extends AppCompatActivity implements movieRecyclerVie
                 Intent insertMovieData = new Intent(getApplicationContext(), com.gdz.ultramovie.insertData.insertMovieData.class);
                 insertMovieData.putExtra("username", String.valueOf(username));
                 startActivity(insertMovieData);
+            }
+        });
+
+        btnWriter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(getApplicationContext(), com.gdz.ultramovie.activity.writerActivity.class);
+                intent1.putExtra("username", String.valueOf(username));
+                startActivity(intent1);
+            }
+        });
+
+        btnGenre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), com.gdz.ultramovie.activity.genreActivity.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
             }
         });
 
@@ -119,49 +144,6 @@ public class mainMenuAdmin extends AppCompatActivity implements movieRecyclerVie
         Volley.newRequestQueue(this).add(request);
     }
 
-    public void btnAboutUsAdmin(View view) {
-        Intent aboutUs = new Intent(getApplicationContext(), aboutUsActivity.class);
-        startActivity(aboutUs);
-    }
-
-    public void btnProfileAdmin(View view) {
-        Intent profile = new Intent(getApplicationContext(), profileActivity.class);
-        profile.putExtra("username", String.valueOf(username));
-        startActivity(profile);
-    }
-
-    @Override
-    public void onMovieClick(movie movie, int position) {
-        Log.d(TAG, "onMovieClick: " + position);
-        Log.d(TAG, "onMovieClick: " + movie.getNamaMovie());
-        Intent movieDetail = new Intent(getApplicationContext(), movieDetailActivity.class);
-        movieDetail.putExtra("movie_name", movie.getNamaMovie());
-        startActivity(movieDetail);
-    }
-
-    @Override
-    public void onMovieLongClick(movie movie, int position) {
-        Log.d(TAG, "onMovieLongClick: " + position);
-        Log.d(TAG, "onMovieLongClick: " + movie.getNamaMovie());
-        nama_movie = movie.getNamaMovie();
-        id_movie = movie.getIdMovie();
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        CharSequence[] pilih = {"Hapus " + movie.getNamaMovie(), "Edit " + movie.getNamaMovie()};
-        builder.setItems(pilih, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                switch (i) {
-                    case 0:
-                        hapusDataMovie(movie.getNamaMovie());
-                        break;
-                    case 1:
-                        updateDataMovie();
-                        break;
-                }
-            }
-        }).show();
-    }
-
     public void hapusDataMovie(final String nama_movie) {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, databaseURL.deleteDataMovie, new Response.Listener<String>() {
             @Override
@@ -170,7 +152,7 @@ public class mainMenuAdmin extends AppCompatActivity implements movieRecyclerVie
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if (!jsonObject.getBoolean("errormsg")) {
-                        Toast.makeText(getApplicationContext(), "Movie " + nama_movie + " Berhasil Dihapus", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Movie " + nama_movie + " Deleted", Toast.LENGTH_SHORT).show();
                     }
                     loadMovieList();
                     setUpAdapter();
@@ -201,5 +183,48 @@ public class mainMenuAdmin extends AppCompatActivity implements movieRecyclerVie
         toUpdateMovie.putExtra("username", String.valueOf(username));
         toUpdateMovie.putExtra("id_movie", id_movie);
         startActivity(toUpdateMovie);
+    }
+
+    public void btnAboutUsAdmin(View view) {
+        Intent aboutUs = new Intent(getApplicationContext(), aboutUsActivity.class);
+        startActivity(aboutUs);
+    }
+
+    public void btnProfileAdmin(View view) {
+        Intent profile = new Intent(getApplicationContext(), profileActivity.class);
+        profile.putExtra("username", String.valueOf(username));
+        startActivity(profile);
+    }
+
+    @Override
+    public void onMovieClick(movie movie, int position) {
+        Log.d(TAG, "onMovieClick: " + position);
+        Log.d(TAG, "onMovieClick: " + movie.getNamaMovie());
+        Intent movieDetail = new Intent(getApplicationContext(), movieDetailActivity.class);
+        movieDetail.putExtra("movie_name", movie.getNamaMovie());
+        startActivity(movieDetail);
+    }
+
+    @Override
+    public void onMovieLongClick(movie movie, int position) {
+        Log.d(TAG, "onMovieLongClick: " + position);
+        Log.d(TAG, "onMovieLongClick: " + movie.getNamaMovie());
+        nama_movie = movie.getNamaMovie();
+        id_movie = movie.getIdMovie();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        CharSequence[] pilih = {"Delete " + movie.getNamaMovie(), "Edit " + movie.getNamaMovie()};
+        builder.setItems(pilih, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                switch (i) {
+                    case 0:
+                        hapusDataMovie(movie.getNamaMovie());
+                        break;
+                    case 1:
+                        updateDataMovie();
+                        break;
+                }
+            }
+        }).show();
     }
 }

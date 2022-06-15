@@ -40,7 +40,7 @@ import java.util.Map;
 public class movieRecyclerViewAdapter extends RecyclerView.Adapter<movieRecyclerViewAdapter.myViewHolder> {
 
     private static final String TAG = "movieRecyclerViewAdapter";
-    private onMovieClickListener movieClickListener;
+    private final onMovieClickListener movieClickListener;
     private final ArrayList<movie> movies;
 
     public movieRecyclerViewAdapter(ArrayList<movie> movieArrayList, onMovieClickListener onMovieClickListener){

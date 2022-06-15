@@ -8,7 +8,7 @@
     tools:context=".activity.genreActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerGenre"
+        android:id="@+id/recyclerViewGenre"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/linearBottomGenre" />

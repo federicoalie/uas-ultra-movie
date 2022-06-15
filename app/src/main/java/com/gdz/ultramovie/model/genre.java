@@ -1,7 +1,17 @@
 package com.gdz.ultramovie.model;
 
 public class genre {
-    String id, writer;
+    String id;
+    String genre;
+
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
 
     public String getId() {
         return id;
@@ -11,11 +21,4 @@ public class genre {
         this.id = id;
     }
 
-    public String getWriter() {
-        return writer;
-    }
-
-    public void setWriter(String writer) {
-        this.writer = writer;
-    }
 }
